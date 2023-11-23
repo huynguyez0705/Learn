@@ -1,0 +1,34 @@
+include ../theme/mixin.pug
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Vape Store
+        link(rel="stylesheet", href="../scss/style.css")
+    body
+        #wrapper    
+            include ../theme/head.pug
+            .container
+                h1 All Product
+                .container-product.main-product            
+                        .product
+                            +productFeatured("GeekVape B100","../image/product/vape-pod-1.png","../image/rate-star/Star_{star}.svg","1")
+                            +productFeatured("JOOZE - Strawberry","../image/product/vape-pod-2.png","../image/rate-star/Star_{star}.svg","2")
+                            +productFeatured("Freemax - M Pro 2","../image/product/vape-pod-3.png","../image/rate-star/Star_{star}.svg","3")
+                            +productFeatured("Hellvape Shoelace Organic Cotton","../image/product/vape-pod-4.png","../image/rate-star/Star_{star}.svg","4")
+                            +productLastest("Vaporesso SWAG","../image/product/vape-pod-5.png","../image/rate-star/Star_{star}.svg","5")
+                            +productLastest("Lost Vape Ursa","../image/product/vape-pod-6.png","../image/rate-star/Star_{star}.svg","6")
+                            +productLastest("Freemax - M Pro 2","../image/product/vape-pod-3.png","../image/rate-star/Star_{star}.svg","7")
+                            +productLastest("JOOZE - Menthol","../image/product/vape-pod-7.png","../image/rate-star/Star_{star}.svg","8")
+                            +productFeatured("GeekVape B100","../image/product/vape-pod-1.png","../image/rate-star/Star_{star}.svg","1")
+                            +productFeatured("JOOZE - Strawberry","../image/product/vape-pod-2.png","../image/rate-star/Star_{star}.svg","2")
+                            +productFeatured("Freemax - M Pro 2","../image/product/vape-pod-3.png","../image/rate-star/Star_{star}.svg","3")
+                            +productFeatured("Hellvape Shoelace Organic Cotton","../image/product/vape-pod-4.png","../image/rate-star/Star_{star}.svg","4")
+                .brand-name
+                    +brandLogo("Coca","../image/brand/logo-coca.png")
+                    +brandLogo("Godrej","../image/brand/logo-godrej.png")
+                    +brandLogo("Oppo","../image/brand/logo-oppo.png")
+                    +brandLogo("Paypal","../image/brand/logo-paypal.png")
+                    +brandLogo("Philips","../image/brand/log-philips.png")
+        include ../theme/footer.pug               
