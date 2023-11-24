@@ -1,0 +1,64 @@
+@media (max-width:786px) {
+    #shop-filter {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        position: fixed;
+        right: 0;
+        top: 160px;
+        height: 40px;
+        background-color: #fff;
+        -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3764705882);
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.3764705882);
+        border-radius: 5px 0 0 5px;
+        padding: 8px;
+        z-index: 19999;
+        text-transform: uppercase;
+        font-size: 15px;
+        line-height: 1
+    }
+
+    #shop-filter.active {
+        right: 290px
+    }
+
+    #shop-filter.active:after {
+        display: block;
+        position: absolute;
+        right: -6px;
+        top: 0;
+        width: 15px;
+        height: 50px;
+        background-color: #fff;
+        content: ""
+    }
+
+    #shop-filter span {
+        font-size: 13px;
+        line-height: 1
+    }
+
+    #shop-filter a {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center
+    }
+
+    #shop-filter svg {
+        margin-right: 6px
+    }
+
+    #shop-filter svg.active {
+        display: inline-block
+    }
+
+    #shop-filter #shop-filter__open {
+        display: none
+    }
+}
