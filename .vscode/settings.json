@@ -22,5 +22,5 @@
     "terminal.ansiYellow": "#ff8000"
   },
   "liveServer.settings.multiRootWorkspaceName": "Learning",
-  "editor.inlineSuggest.showToolbar": "onHover"
+  "editor.inlineSuggest.showToolbar": "always"
 }
