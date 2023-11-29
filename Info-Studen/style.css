@@ -6,6 +6,10 @@ body {
   background: url("login-bg.png") no-repeat center fixed;
   display: flex;
 }
+a {
+  text-decoration: none;
+  color: #fff;
+}
 .info-student {
   width: 600px;
   border: 1px solid #eee;
@@ -121,7 +125,9 @@ btnUpdate {
 table {
   width: 100%;
 }
-
+thead th {
+  background-color: rgb(108, 61, 218);
+}
 thead th,
 tbody td {
   padding: 10px;
