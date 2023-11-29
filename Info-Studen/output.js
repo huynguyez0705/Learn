@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Đảm bảo có dữ liệu để hiển thị
   if (studentsArray.length > 0) {
     // Duyệt qua mảng học sinh và thêm dữ liệu vào bảng
-    studentsArray.forEach(function render(student, index) {
+    studentsArray.forEach(function (student, index) {
       let studenID = index;
       // Tạo một dòng mới trong bảng
       const row = table.insertRow();
