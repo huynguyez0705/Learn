@@ -31,7 +31,7 @@ function main() {
       const giaTien = tinhtienTaxi(Number(soKm));
       console.log(`Bạn phải trả ${giaTien} đ cho ${soKm} km `);
       main();
-    }
+    },
   );
 }
 main();
