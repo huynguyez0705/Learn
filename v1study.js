@@ -160,12 +160,12 @@ for (let i = 1; i <= 6; i++) {
 
   // Kiểm tra nếu đang ở hàng đầu hoặc hàng cuối.
   if (i === 1 || i === 6) {
-    for (let j = 1; j <= 20; j++) {
+    for (let j = 1; j <= 3; j++) {
       row8 += "*";
     }
   } else {
-    row8 += "*";
-    for (let k = 2; k <= 19; k++) {
+    row8 += "#";
+    for (let k = 2; k <= 2; k++) {
       row8 += "@";
     }
     row8 += "*";
