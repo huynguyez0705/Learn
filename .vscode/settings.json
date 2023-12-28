@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true
@@ -6,4 +7,8 @@
   "editor.inlineSuggest.showToolbar": "onHover",
   "livePreview.defaultPreviewPath": "/index.html"
 >>>>>>> congty
+=======
+	"editor.inlineSuggest.showToolbar": "onHover",
+	"livePreview.defaultPreviewPath": "/index.html"
+>>>>>>> Stashed changes
 }
