@@ -1,4 +1,7 @@
 {
-  "editor.inlineSuggest.showToolbar": "onHover",
-  "livePreview.defaultPreviewPath": "/index.html"
+	"editor.inlineSuggest.showToolbar": "always",
+	"files.autoSave": "afterDelay",
+	"editor.fontSize": 16,
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode"
 }
