@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+<<<<<<< HEAD
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,4 +55,80 @@
 		<script src="input.js"></script>
 		<script src="output.js"></script>
 	</body>
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="info-student">
+      <div class="info__student--title">
+        <h2>Thông tin học sinh</h2>
+      </div>
+      <form action="#" method="post" class="infoo__student-form">
+        <label for="name" class="infor__form-title">Tên học sinh </label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Nhập tên học sinh"
+          class="info__form-box"
+        />
+        <label for="mail" class="infor__form-title">Email </label>
+        <input
+          type="mail"
+          name="mail"
+          id="mail"
+          placeholder="Nhập email học sinh"
+          class="info__form-box"
+        />
+        <label for="phone" class="infor__form-title">Số điện thoại </label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="Nhập số điện thoại"
+          class="info__form-box"
+        />
+        <label class="infor__form-title">Giới tính </label>
+        <label for="nam" class="infor__form-sex">
+          <input type="radio" id="nam" name="gioiTinh" value="Nam" /> Nam
+        </label>
+        <label for="nu" class="infor__form-sex">
+          <input type="radio" id="nu" name="gioiTinh" value="Nữ" /> Nữ
+        </label>
+        <div class="btn">
+          <button type="button" class="btnsave" id="btnsave">Lưu lại</button>
+          <button type="reset" class="btnreset" id="btnreset">Làm mới</button>
+        </div>
+      </form>
+      <script src="index.js" defer></script>
+    </div>
+    <div class="list-student">
+      <div class="list__student--title">
+        <h2>Danh sách học học sinh</h2>
+      </div>
+      <table width="1000" cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Tên học sinh</th>
+            <th>Email học sinh</th>
+            <th>Số điện thọai</th>
+            <th>Giới tính</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="noData" style="display: none">Không có học sinh.</p>
+      <button type="button" class="btnUpdate" id="btnUpdate" onclick="update()">
+        Update
+      </button>
+    </div>
+    <script src="input.js"></script>
+    <script src="output.js"></script>
+  </body>
+>>>>>>> congty
 </html>

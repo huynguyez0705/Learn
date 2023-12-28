@@ -78,12 +78,18 @@ input::placeholder {
 .btnreset {
   background-color: #c2fbd7;
 
+<<<<<<< HEAD
   box-shadow:
     rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
     rgba(44, 187, 99, 0.15) 0 1px 2px,
     rgba(44, 187, 99, 0.15) 0 2px 4px,
     rgba(44, 187, 99, 0.15) 0 4px 8px,
     rgba(44, 187, 99, 0.15) 0 8px 16px,
+=======
+  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+>>>>>>> congty
     rgba(44, 187, 99, 0.15) 0 16px 32px;
   color: green;
   border-color: #c2fbd7;
@@ -92,12 +98,18 @@ input::placeholder {
 btnUpdate {
   background-color: #ffe7e7;
   color: rgb(210, 58, 45);
+<<<<<<< HEAD
   box-shadow:
     rgba(210, 58, 45, 0.2) 0 -25px 18px -14px inset,
     rgba(210, 58, 45, 0.15) 0 1px 2px,
     rgba(210, 58, 45, 0.15) 0 2px 4px,
     rgba(210, 58, 45, 0.15) 0 4px 8px,
     rgba(210, 58, 45, 0.15) 0 8px 16px,
+=======
+  box-shadow: rgba(210, 58, 45, 0.2) 0 -25px 18px -14px inset,
+    rgba(210, 58, 45, 0.15) 0 1px 2px, rgba(210, 58, 45, 0.15) 0 2px 4px,
+    rgba(210, 58, 45, 0.15) 0 4px 8px, rgba(210, 58, 45, 0.15) 0 8px 16px,
+>>>>>>> congty
     rgba(210, 58, 45, 0.15) 0 16px 32px;
   border-color: rgb(210, 58, 45);
 }
@@ -107,12 +119,18 @@ btnUpdate {
   margin-top: 3em;
   background-color: #ffe7e7;
   color: rgb(210, 58, 45);
+<<<<<<< HEAD
   box-shadow:
     rgba(210, 58, 45, 0.2) 0 -25px 18px -14px inset,
     rgba(210, 58, 45, 0.15) 0 1px 2px,
     rgba(210, 58, 45, 0.15) 0 2px 4px,
     rgba(210, 58, 45, 0.15) 0 4px 8px,
     rgba(210, 58, 45, 0.15) 0 8px 16px,
+=======
+  box-shadow: rgba(210, 58, 45, 0.2) 0 -25px 18px -14px inset,
+    rgba(210, 58, 45, 0.15) 0 1px 2px, rgba(210, 58, 45, 0.15) 0 2px 4px,
+    rgba(210, 58, 45, 0.15) 0 4px 8px, rgba(210, 58, 45, 0.15) 0 8px 16px,
+>>>>>>> congty
     rgba(210, 58, 45, 0.15) 0 16px 32px;
   border-color: rgb(210, 58, 45);
 }

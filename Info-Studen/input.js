@@ -18,7 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailInput = document.getElementById("mail");
     const phoneInput = document.getElementById("phone");
     const genderElement = document.querySelector(
+<<<<<<< HEAD
       "input[name=gioiTinh]:checked",
+=======
+      "input[name=gioiTinh]:checked"
+>>>>>>> congty
     );
 
     const name = nameInput.value;
