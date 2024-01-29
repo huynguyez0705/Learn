@@ -1,0 +1,30 @@
+{
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [
+		{
+			"@type": "Question",
+			"name": "Dị ứng sữa rửa mặt bao lâu thì hết?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "<p>Thời gian này sẽ tùy thuộc vào nguyên nhân gây dị ứng. Nếu do sử dụng sản phẩm có độ pH quá cao, việc ngừng sử dụng và điều trị có thể giúp bạn khắc phục trong vòng khoảng 1 tuần. Tuy nhiên, nếu dị ứng xuất phát từ các thành phần kém chất lượng, quá trình hồi phục có thể kéo dài từ 20 ngày đến 40 ngày, phụ thuộc vào mức độ kích ứng và loại da của mỗi người.</p>"
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "Dị ứng sữa rửa mặt có tự khỏi được không?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "<p>Dị ứng sữa rửa mặt có thể tự khỏi hay không còn tùy thuộc vào nguyên nhân và mức độ nghiêm trọng của dị ứng. Nếu dị ứng xuất phát từ việc sử dụng sản phẩm có độ pH quá cao, việc ngừng sử dụng và điều trị có thể giúp tự khỏi trong khoảng 1 tuần.</p><p>Tuy nhiên, nếu nguyên nhân là do các thành phần kém chất lượng, quá trình tự khỏi có thể mất thời gian lâu hơn, từ 20 đến 40 ngày hoặc thậm chí lâu hơn nếu tình trạng dị ứng nặng và kéo dài. Trong mọi trường hợp, nếu tình trạng không cải thiện hoặc trở nên nghiêm trọng, bạn nên đến các cơ sở uy tín về da liễu để được chẩn đoán chính xác hơn.</p>"
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "Dị ứng sữa rửa mặt nguy hiểm như thế nào?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "<p>Dị ứng sữa rửa mặt có thể gây ra những vấn đề nghiêm trọng cho làn da của bạn. Khi dị ứng, làn da có thể trở nên đỏ, sưng, ngứa ngáy và thậm chí có thể xuất hiện mụn nổi. Nếu tiếp tục sử dụng sản phẩm gây dị ứng, tình trạng có thể trở nên tồi tệ hơn, làm tổn thương nặng và tăng nguy cơ mắc các vấn đề da khác.</p><p>Ngoài ra, việc da bị dị ứng có thể làm giảm khả năng tự vệ của làn da, làm tăng nguy cơ nhiễm trùng và viêm nhiễm. Do đó, quan trọng nhất là phải ngừng ngay việc sử dụng sản phẩm khi phát hiện dị ứng để tránh tình trạng tổn thương nặng và duy trì sức khỏe cho làn da của bạn. Nếu tình trạng không cải thiện, tìm kiếm sự tư vấn từ chuyên gia da liễu là quan trọng.</p>"
+			}
+		}
+	]
+}

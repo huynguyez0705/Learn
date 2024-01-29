@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			box-sizing: border-box;
+			padding: 0;
+			font-family: 'Poppins', sans-serif;
+		}
+		body {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			height: 100vh;
+			font-size: 10px;
+		}
+		.container {
+			margin-block-start: 2em;
+		}
+		.row {
+			margin-block-start: 5em;
+			margin-block-end: 8em;
+		}
+		.title__top {
+			margin-block-end: 2em;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			width: 80em;
+		}
+		.name {
+			margin-inline-end: 1em;
+			font-size: 2em;
+		}
+		.input {
+			font-size: 2em;
+			padding: 0.5em;
+			max-width: 40em;
+			width: 100%;
+			overflow: hidden;
+			overflow-wrap: break-word;
+			text-align: start;
+		}
+		.number {
+			font-size: 2em;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<div class="row title">
+				<div class="title__top">
+					<label for="title__input" class="name">Tiêu đề trang (đề xuất từ 40 - 60 ký tự)</label>
+					<span class="number" id="input__char-title">0/60</span>
+				</div>
+				<textarea
+					type="text"
+					id="title__input"
+					name="title__input"
+					class="title__input input"
+					placeholder="Nhập title"
+					
+				></textarea>
+			</div>
+			<div class="row meta">
+				<div class="title__top">
+					<label for="meta__input " class="name">Mô tả trang (đề xuất từ 50 - 155 ký tự)</label>
+					<span class="number" id="input__char-meta">0/160</span>
+				</div>
+				<textarea
+					type="text"
+					id="meta__input"
+					name="meta__input"
+					class="meta__input input"
+					placeholder="Nhập Meta Description"
+					
+				></textarea>
+			</div>
+		</div>
+		<script>
+	document.addEventListener('DOMContentLoaded', function () {
+	const textareas = document.querySelectorAll('.input');
+
+	textareas.forEach(textarea => {
+    textarea.addEventListener('input', function () {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+
+    const charCount = this.value.length;
+			console.log(charCount);
+			if(this.id === "title__input"){
+				document.getElementById('input__char-title').innerHTML =`${charCount}/60`;}
+			if(this.id === "meta__input"){
+			document.getElementById('input__char-meta').textContent =`${charCount}/160`;}
+    });
+});
+});
+	</script>
+		</script>
+	</body>
+</html>
