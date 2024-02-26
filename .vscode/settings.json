@@ -26,5 +26,6 @@
 	"editor.formatOnSave": true,
 	"editor.fontSize": 16,
 	"files.autoSave": "afterDelay",
-	"editor.defaultFormatter": "esbenp.prettier-vscode"
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.fontFamily": "'FiraCodeiScript',Consolas, 'Courier New', monospace"
 }
