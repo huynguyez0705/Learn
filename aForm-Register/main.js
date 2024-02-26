@@ -12,5 +12,6 @@ passwordContainers.forEach(container => {
 			passwordInput.type = 'password'
 			showPasswordIcon.classList.replace('fa-eye-slash', 'fa-eye')
 		}
+		return
 	})
 })
