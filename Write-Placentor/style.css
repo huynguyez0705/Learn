@@ -19,8 +19,20 @@ img {
 	max-width: 100%;
 }
 p {
-	margin-bottom: 2.5em;
+	margin-bottom: 25px;
 	line-height: 1.5;
+}
+p.image-blog {
+	margin-bottom: 10px;
+	background-color: #d7d7dc;
+}
+ul li {
+	list-style-type: disc;
+	margin-bottom: 10px;
+}
+.xem-them ul li {
+	list-style-type: none;
+	margin-bottom: 10px;
 }
 .sapo {
 	text-align: justify;
