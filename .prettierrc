@@ -3,7 +3,7 @@
 	"__comment 1__": "Tránh sử dụng dấu ngoặc nhọn ('()') khi không cần thiết.",
 
 	"bracketSameLine": true,
-	"__comment 2__": "Đặt dấu ngoặc vuông trên cùng dòng của đối tượng và mảng.",
+	"__comment 2__": "Đặt dấu ngoặc vuôn`g trên cùng dòng của đối tượng và mảng.",
 
 	"semi": false,
 	"__comment 3__": "Không sử dụng dấu chấm phẩy ';' ở cuối mỗi câu lệnh.",

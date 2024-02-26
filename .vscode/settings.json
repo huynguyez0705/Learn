@@ -21,11 +21,26 @@
 		"terminal.ansiWhite": "#ff0000",
 		"terminal.ansiYellow": "#ff8000"
 	},
-	"liveServer.settings.multiRootWorkspaceName": "Learning",
-	"editor.inlineSuggest.showToolbar": "onHover",
+	"editor.inlineSuggest.showToolbar": "always",
+	"files.autoSave": "onFocusChange",
+	"editor.fontSize": 19,
 	"editor.formatOnSave": true,
-	"editor.fontSize": 16,
-	"files.autoSave": "afterDelay",
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.fontFamily": "'FiraCodeiScript',Consolas, 'Courier New', monospace"
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": true,
+	"editor.fontWeight": "normal",
+	"editor.renderWhitespace": "selection",
+	"editor.minimap.autohide": false,
+	"editor.minimap.enabled": true,
+	"editor.fontLigatures": true,
+	"editor.fontFamily": "'Fira Code iScript','Fira Code' , Consolas, 'Courier New', monospace",
+	"editor.tabSize": 2,
+	"a-file-icon-vscode.folderTheme": "specific",
+	"a-file-icon-vscode.folderColor": "#727272",
+	"a-file-icon-vscode.saturation": 1,
+	"editor.tokenColorCustomizations": {
+		"settings": {
+			"fontStyle": "italic"
+		}
+	}
 }
