@@ -50,7 +50,12 @@ body {
 .form-control.success {
 	border-bottom-color: var(--succes);
 }
-
+.form-control.error,
+.form-control.error input::placeholder,
+.form-control.error .icon {
+	border-bottom-color: var(--error);
+	color: var(--error);
+}
 .form-control input {
 	width: 100%;
 	outline: none;
@@ -60,9 +65,7 @@ body {
 	color: #fff;
 	padding-left: calc(30px + 1em);
 }
-.form-control.error {
-	border-bottom-color: var(--error);
-}
+
 .form-control input::placeholder {
 	color: #fff;
 }
@@ -82,8 +85,9 @@ body {
 	color: #fff;
 	top: 0.2em;
 	z-index: 100;
+	cursor: pointer;
 }
-small {
+.form-control.error .error-msg {
 	position: absolute;
 	left: 0;
 	top: 100%;

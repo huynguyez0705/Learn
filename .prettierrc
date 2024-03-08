@@ -2,7 +2,7 @@
 	"arrowParens": "avoid",
 	"__comment 1__": "Tránh sử dụng dấu ngoặc nhọn ('()') khi không cần thiết.",
 
-	"bracketSameLine": true,
+	"bracketSameLine": false,
 	"__comment 2__": "Đặt dấu ngoặc vuôn`g trên cùng dòng của đối tượng và mảng.",
 
 	"semi": false,
@@ -17,7 +17,7 @@
 	"quoteProps": "as-needed",
 	"__comment 6__": "Tránh sử dụng dấu ngoặc đơn (' ') khi không cần thiết.",
 
-	"trailingComma": "none",
+	"trailingComma": "all",
 	"__comment 7__": "Hiển thị một dòng dấu ngoặc đóng '>)' ở cuối mỗi dòng.",
 
 	"singleAttributePerLine": false,
