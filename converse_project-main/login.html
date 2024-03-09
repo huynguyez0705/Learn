@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Converse</title>
+    <link rel="SHORTCUT ICON" href="./img/slider/slide-2.ico" />
+    <link rel="stylesheet" href="./css/signup.css" />
+  </head>
+  <body>
+    <div class="container1">
+      <div class="container-signup">
+        <div class="heading">
+          <h1>Login</h1>
+        </div>
+        <div class="sign-up">
+          <form class="form" action="">
+            <div class="input-form">
+              <span>User Name: </span>
+              <small style="color: red">(*)</small>
+              <br />
+              <small style="color: red" id="errorName"></small>
+              <input id="username" type="text" placeholder="Enter your name " />
+            </div>
+            <div class="input-form">
+              <span>Email: </span>
+              <small style="color: red">(*)</small>
+              <br />
+              <small style="color: red" id="errorEmail"></small>
+              <input id="email" type="email" placeholder="Enter your email " />
+            </div>
+            <div class="input-form">
+              <span>Password: </span>
+              <small style="color: red">(*)</small>
+              <br />
+              <small style="color: red" id="errorPass"></small>
+              <input
+                id="password"
+                type="password"
+                placeholder="Enter your password "
+              />
+            </div>
+            <button class="login" id="btn-login">Login</button>
+            <span
+              >Don't have an account?
+              <a class="xanh" href="signup.html">Sign Up</a></span
+            >
+            <span> <a href=""> Forgot your password?</a></span>
+          </form>
+        </div>
+      </div>
+
+      <div class="background">
+        <img src="./img/slider/welcome-2022.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+  <script src="./js/login.js"></script>
+</html>

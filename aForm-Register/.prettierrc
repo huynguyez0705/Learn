@@ -7,7 +7,7 @@
 	"experimentalTernaries": false,
 	"singleQuote": true,
 	"quoteProps": "as-needed",
-	"trailingComma": "none",
+	"trailingComma": "es5",
 	"singleAttributePerLine": false,
 
 	"htmlWhitespaceSensitivity": "css",

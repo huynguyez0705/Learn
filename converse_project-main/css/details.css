@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.product-container__details {
+  padding: 40px 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 189px;
+}
+.product-main_details {
+  width: 80%;
+  margin: 0 auto;
+}
+.product_row_left-content {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.product_row-content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.product_row_right-content {
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.breadcrumb-right {
+  display: flex;
+  margin-bottom: 10px;
+}
+.breadcrumb-right .divider {
+  margin: 0 0.3em;
+}
+.breadcrumb-right > a {
+  padding: 0 0;
+}
+.breadcrumb-right > h1 {
+  margin-bottom: 10px;
+}
+.is-divider {
+  height: 3px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 1em 0 1em;
+  width: 50%;
+}
+.detail-num {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+.time-detail {
+  width: 20px;
+  height: 35px;
+  text-align: center;
+  line-height: 1.5;
+  border: solid 1px #ccc;
+  cursor: pointer;
+}
+.time-detail > span {
+  font-size: 21px;
+}
+.time-detail:hover {
+  background-color: #ccc;
+}
+.btn-detail > button {
+  width: 170px;
+  height: 35px;
+  font-size: 17px;
+  margin-left: 50px;
+  background-color: #d26e4b;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-detail > button:hover {
+  background-color: #c30005;
+  transition: all 0.2s linear;
+}
+.btn-detail-title > button {
+  width: 170px;
+  height: 35px;
+  font-size: 17px;
+  margin-top: 30px;
+  background-color: #c30005;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-detail-title > button:hover {
+  background-color: #7d2629;
+  transition: all 0.2s linear;
+}
+.col-right > p,
+.col-left > p {
+  margin: 16px 0;
+}
+.small-detail {
+  margin-top: 25px;
+}
+.small-detail {
+  margin-bottom: 5px;
+  opacity: 0.8;
+  font-size: 14px;
+}
+.input-detail > input {
+  width: 40px;
+  height: 35px;
+  border: solid 1px #ccc;
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+}
+.col-inner {
+  padding-top: 0px;
+  padding-right: 9.8px;
+  padding-bottom: 19.6px;
+  padding-left: 9.8px;
+  margin-bottom: 0;
+}
+.ship-infor {
+  display: flex;
+}
+.bank-infor {
+  display: flex;
+}
+.divider-column {
+  display: flex;
+  flex-direction: column;
+}
+.col-inner {
+  margin-bottom: 20px;
+}
+.right_down-elements-details {
+  display: flex;
+}
+
+.more-detail {
+  padding: 30px 0;
+  border-top: 1px solid #ececec;
+  display: flex;
+  flex-direction: column;
+}
+.more-detail > div > h4 {
+  line-height: 50px;
+  border: solid 1px #ccc;
+  width: 200px;
+  text-align: center;
+  background-color: #433f3f;
+  color: #fff;
+}
+.more-detail__main {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 30px;
+}
+table {
+  width: 100%;
+  margin-bottom: 1em;
+  border-color: #ececec;
+  border-spacing: 0;
+  display: table;
+}
+table td,
+table th {
+  border-bottom: solid 1px #ccc;
+}
+table td > p {
+  font-size: 16px;
+  line-height: 50px;
+  opacity: 0.8;
+}

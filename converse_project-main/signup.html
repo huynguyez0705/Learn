@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Converse</title>
+    <link rel="SHORTCUT ICON" href="./img/slider/slide-2.ico" />
+    <link rel="stylesheet" href="./css/signup.css" />
+  </head>
+  <body>
+    <div class="container1">
+      <div class="background">
+        <img src="./img/slider/women.webp" alt="" />
+      </div>
+      <div class="container-signup">
+        <div class="heading">
+          <h1>Sign Up</h1>
+        </div>
+        <div class="sign-up">
+          <form id="form">
+            <div class="input-form">
+              <span>User Name: </span>
+              <small style="color: red">(*)</small>
+              <br />
+              <input id="username" type="text" placeholder="Enter your name " />
+              <small style="color: red" id="errorName"></small>
+            </div>
+            <div class="input-form">
+              <span>Email: </span>
+              <small style="color: red">(*)</small>
+              <br />
+              <input id="email" type="email" placeholder="Enter your email " />
+              <small style="color: red" id="errorEmail"></small>
+            </div>
+            <div class="input-form">
+              <span>Password: </span>
+              <small style="color: red">(*)</small>
+              <br />
+              <input
+                id="password"
+                type="password"
+                placeholder="Enter your password "
+              />
+              <small style="color: red" id="errorPass"></small>
+            </div>
+            <div class="input-form">
+              <span>Confirm Password: </span>
+              <small style="color: red">(*)</small>
+              <br />
+              <input
+                id="cfpassword"
+                type="password"
+                placeholder="Confirm your password "
+              />
+              <small style="color: red" id="errorCfPass"></small>
+            </div>
+            <button id="btn-signup">Sign Up</button>
+            <span
+              >Already have an account?
+              <a class="xanh" href="login.html">Login</a></span
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/signUp.js"></script>
+</html>
