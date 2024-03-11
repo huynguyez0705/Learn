@@ -2,12 +2,11 @@ const username = document.getElementById('username')
 const email = document.getElementById('email')
 const password = document.getElementById('password')
 const cfpassword = document.getElementById('cfpassword')
-const form = document.querySelector('.form-box')
 
-function showError(input, massage) {
+function showError(input, message) {
 	const inputElement = input.parentElement
 	const errorElement = inputElement.querySelector('small')
-	errorElement.innerText = massage
+	errorElement.innerText = message
 	inputElement.classList.add('error')
 	inputElement.classList.remove('success')
 }
@@ -92,28 +91,40 @@ function handleInput(inputElement, validationFunction) {
 		return inputElement
 	}
 }
+function getNameInput(input) {
+	return input.id.charAt(0).toUpperCase() + input.id.slice(1)
+}
 
-handleInput(username, () => checkUsername(username))
-handleInput(email, () => checkEmail(email))
-handleInput(password, () => isLength(password, 8, 20))
-handleInput(cfpassword, () => confirmPassword(cfpassword, password))
-showPassword([password, cfpassword])
+function checkInput() {
+	let isCheck = true
 
-form.addEventListener('submit', e => {
-	e.preventDefault()
-	let user = {
-		username,
-		email,
-		password,
-		cfpassword,
-	}
+	handleInput(username, () => {
+		checkUsername(username)
+	})
+	handleInput(email, () => {
+		checkEmail(email)
+	})
+	handleInput(password, () => {
+		isLength(password, 8, 20)
+	})
+	handleInput(cfpassword, () => {
+		confirmPassword(cfpassword, password)
+	})
+	document.querySelectorAll('.form-control').forEach(control => {
+		if (control.classList.contains('error')) {
+			isCheck = false
+		}
+	})
+	return isCheck
+}
 
-	if (handleInput(username, () => checkUsername(username))) {
-		console.log('1')
-	}
-	if (handleInput(email, () => checkEmail(email))) {
-		console.log('2')
-	}
-	if (!handleInput(password, () => isLength(password, 8, 20))) return
-	if (!handleInput(cfpassword, () => confirmPassword(cfpassword, password))) return
+document.querySelectorAll('.form-box').forEach(form => {
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		if (checkInput()) {
+			console.log('ok')
+		} else {
+			console.log('no')
+		}
+	})
 })
