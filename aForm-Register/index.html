@@ -17,42 +17,56 @@
 		<div class="container">
 			<form class="form-sign-up form-box">
 				<h1>Create Your Profile</h1>
+				<h2 class=""></h2>
 				<div class="form-control">
-					<input type="text" class="username-signup" id="username" placeholder="Username" />
+					<input type="text" class="username-signup" id="username" placeholder="Username" name="username" />
 					<i class="fa-solid fa-user icon"></i>
 					<small></small>
 				</div>
-
 				<div class="form-control">
-					<input type="text" class="email-signup" id="email" placeholder="Email" />
+					<input type="text" class="email-signup" id="email" placeholder="Email" name="email" />
 					<i class="fa-solid fa-envelope icon"></i>
 					<small></small>
 				</div>
 				<div class="form-control password-container">
-					<input type="password" class="password-signup" id="password" placeholder="Password" />
+					<input type="password" class="password-signup" id="password" placeholder="Password" name="password" />
 					<i class="fa-solid fa-lock icon"></i>
 					<i class="fa-regular icon-pw fa-eye"></i>
 					<a href=""></a>
 					<small></small>
 				</div>
 				<div class="form-control password-container">
-					<input type="password" class="passwordcf-signup" id="cfpassword" placeholder="Confirm Password" />
+					<input type="password" class="passwordcf-signup" id="cfpassword" name="cfpassword" placeholder="Confirm Password" />
 					<i class="fa-solid fa-lock icon"></i>
 					<i class="fa-regular fa-eye icon-pw"></i>
 					<small></small>
 				</div>
-				<button type="submit" class="btn-signup">Đăng ký</button>
-				
+				<button type="submit" class="btn-signup">Register</button>
 			</form>
 
+			<!-- Form Login -->
 			<form class="form-sign-in form-box">
-				<!-- <h1>Create Your Profile</h1>
+				<h1>Create Your Profile</h1>
+				<h2 class=""></h2>
 				<div class="form-control">
-					<input type="text" id="username-signin" placeholder="Username" />
-				</div> -->
-				<!-- <button type="submit" class="btn-signin">Đăng ký</button> -->
+					<input type="text" class="usernameEmail" placeholder="Username Or Email" />
+					<i class="fa-solid fa-user icon"></i>
+					<small></small>
+				</div>
+				<div class="form-control">
+					<input type="password" class="password-login" placeholder="Password" name="passwordLogin" id="passwordLogin" />
+					<i class="fa-solid fa-lock icon"></i>
+					<i class="fa-regular icon-pw fa-eye"></i>
+					<a href=""></a>
+					<small></small>
+				</div>
+				<button type="submit" class="btn-signup">Login</button>
 			</form>
 		</div>
+		<div class="overlay-container">
+			<div class="overlay"></div>
+		</div>
+
 		<script src="main.js"></script>
 	</body>
 </html>

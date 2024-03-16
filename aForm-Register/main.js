@@ -2,6 +2,7 @@ const username = document.getElementById('username')
 const email = document.getElementById('email')
 const password = document.getElementById('password')
 const cfpassword = document.getElementById('cfpassword')
+const passwordLogin = document.getElementById('passwordLogin')
 
 function showError(input, message) {
 	const inputElement = input.parentElement
@@ -54,7 +55,7 @@ function confirmPassword(input, input2) {
 	const inputElement = input.value.trim()
 	const inputElement2 = input2.value.trim()
 	if (inputElement === '' || inputElement === null) {
-		showError(input, 'Password không được để trống')
+		showError(input, 'Confirm Password không được để trống')
 	} else if (inputElement !== inputElement2) {
 		showError(input, 'Xác nhận mật khẩu không đúng')
 	} else showSuccess(input)
@@ -64,8 +65,9 @@ function showPassword(inputs) {
 	inputs.forEach(function (input) {
 		const formControl = input.parentElement
 		const iconElement = formControl.querySelector('.icon-pw')
-		let isPasswordVisible = iconElement.classList.contains('fa-eye')
+		let isPasswordVisible = false
 		iconElement.onclick = function () {
+			isPasswordVisible = !isPasswordVisible
 			if (isPasswordVisible) {
 				iconElement.classList.replace('fa-eye', 'fa-eye-slash')
 				input.type = 'text'
@@ -82,34 +84,32 @@ function handleInput(inputElement, validationFunction) {
 		inputElement.addEventListener('blur', () => {
 			validationFunction(inputElement)
 		})
-		return inputElement
-	}
-	if (inputElement) {
 		inputElement.addEventListener('input', () => {
 			validationFunction(inputElement)
 		})
 		return inputElement
 	}
 }
-function getNameInput(input) {
-	return input.id.charAt(0).toUpperCase() + input.id.slice(1)
-}
+handleInput(username, () => {
+	checkUsername(username)
+})
+handleInput(email, () => {
+	checkEmail(email)
+})
+handleInput(password, () => {
+	isLength(password, 8, 20)
+})
+handleInput(cfpassword, () => {
+	confirmPassword(cfpassword, password)
+})
+showPassword([password, passwordLogin, cfpassword])
 
 function checkInput() {
 	let isCheck = true
-
-	handleInput(username, () => {
-		checkUsername(username)
-	})
-	handleInput(email, () => {
-		checkEmail(email)
-	})
-	handleInput(password, () => {
-		isLength(password, 8, 20)
-	})
-	handleInput(cfpassword, () => {
-		confirmPassword(cfpassword, password)
-	})
+	checkUsername(username)
+	checkEmail(email)
+	isLength(password, 8, 20)
+	confirmPassword(cfpassword, password)
 	document.querySelectorAll('.form-control').forEach(control => {
 		if (control.classList.contains('error')) {
 			isCheck = false
@@ -121,10 +121,22 @@ function checkInput() {
 document.querySelectorAll('.form-box').forEach(form => {
 	form.addEventListener('submit', e => {
 		e.preventDefault()
-		if (checkInput()) {
-			console.log('ok')
-		} else {
-			console.log('no')
+		let user = {
+			username: username.value,
+			email: email.value,
+			password: password.value,
+			cfpassword: cfpassword.value
 		}
+		const jsonUser = JSON.stringify(user)
+
+		if (!checkInput()) {
+			return
+		} else {
+			localStorage.setItem(username.value, jsonUser)
+		}
+
+		//// Chuyển đối tượng user thành chuỗi JSON
+
+		// Lưu vào localStorage với key là 'user'
 	})
 })
