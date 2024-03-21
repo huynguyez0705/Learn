@@ -139,13 +139,14 @@ document.querySelector('.form-sign-up').addEventListener('submit', e => {
 		password: password.value,
 		cfpassword: cfpassword.value
 	}
-	const jsonUser = JSON.stringify(user)
+	let listUser = JSON.parse(localStorage.getItem('account')) || []
+	listUser.push(user)
 	if (!checkInput()) {
 		return
 	} else {
-
 		alert('đăng ký thành công')
-		localStorage.setItem('account', jsonUser)
+		localStorage.setItem('account', JSON.stringify(listUser))
+		console.log(listUser)
 		history.pushState({}, '', 'index.html')
 		window.location.reload()
 	}

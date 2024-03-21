@@ -11,9 +11,4 @@ handleInput(passwordLogin, () => {
 
 document.querySelector('.form-sign-in').addEventListener('submit', e => {
 	e.preventDefault()
-
-	let user = JSON.parse(localStorage.getItem('account'))
-	const data = user.some(user => {
-		console.log(user)
-	})
 })
