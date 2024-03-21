@@ -1,10 +1,20 @@
+const container = document.querySelector('.container')
 const username = document.getElementById('username')
 const email = document.getElementById('email')
 const password = document.getElementById('password')
 const cfpassword = document.getElementById('cfpassword')
-const passwordLogin = document.getElementById('passwordLogin')
 
-function showError(input, message) {
+const btnsignUp = document.getElementById('signUp')
+const btnsignIn = document.getElementById('signIn')
+
+btnsignIn.addEventListener('click', () => {
+	container.classList.add('active-panel')
+})
+btnsignUp.addEventListener('click', () => {
+	container.classList.remove('active-panel')
+})
+
+export function showError(input, message) {
 	const inputElement = input.parentElement
 	const errorElement = inputElement.querySelector('small')
 	errorElement.innerText = message
@@ -18,13 +28,13 @@ function showSuccess(input) {
 	inputElement.classList.add('success')
 	inputElement.classList.remove('error')
 }
-function checkUsername(input) {
+export function checkUsername(input) {
 	const inputElement = input.value.trim()
 	const regex = /^[a-zA-Z0-9!@#$%^&*()_+-=<>?]{1,15}$/
 	if (inputElement === '' || inputElement === null) {
-		showError(input, `Username không được để trống`)
+		showError(input, `${getNameInput(input)} không được để trống`)
 	} else if (!regex.test(inputElement)) {
-		showError(input, 'Username không hợp lệ')
+		showError(input, `${getNameInput(input)} không hợp lệ`)
 	} else showSuccess(input)
 	return inputElement
 }
@@ -79,7 +89,7 @@ function showPassword(inputs) {
 	})
 }
 
-function handleInput(inputElement, validationFunction) {
+export function handleInput(inputElement, validationFunction) {
 	if (inputElement) {
 		inputElement.addEventListener('blur', () => {
 			validationFunction(inputElement)
@@ -104,7 +114,7 @@ handleInput(cfpassword, () => {
 })
 showPassword([password, passwordLogin, cfpassword])
 
-function checkInput() {
+export function checkInput() {
 	let isCheck = true
 	checkUsername(username)
 	checkEmail(email)
@@ -117,26 +127,26 @@ function checkInput() {
 	})
 	return isCheck
 }
+function getNameInput(input) {
+	return input.id.charAt(0).toUpperCase() + input.id.toLowerCase().slice(1)
+}
 
-document.querySelectorAll('.form-box').forEach(form => {
-	form.addEventListener('submit', e => {
-		e.preventDefault()
-		let user = {
-			username: username.value,
-			email: email.value,
-			password: password.value,
-			cfpassword: cfpassword.value
-		}
-		const jsonUser = JSON.stringify(user)
+document.querySelector('.form-sign-up').addEventListener('submit', e => {
+	e.preventDefault()
+	let user = {
+		username: username.value,
+		email: email.value,
+		password: password.value,
+		cfpassword: cfpassword.value
+	}
+	const jsonUser = JSON.stringify(user)
+	if (!checkInput()) {
+		return
+	} else {
 
-		if (!checkInput()) {
-			return
-		} else {
-			localStorage.setItem(username.value, jsonUser)
-		}
-
-		//// Chuyển đối tượng user thành chuỗi JSON
-
-		// Lưu vào localStorage với key là 'user'
-	})
+		alert('đăng ký thành công')
+		localStorage.setItem('account', jsonUser)
+		history.pushState({}, '', 'index.html')
+		window.location.reload()
+	}
 })
