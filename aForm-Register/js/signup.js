@@ -114,7 +114,7 @@ handleInput(cfpassword, () => {
 })
 showPassword([password, passwordLogin, cfpassword])
 
-export function checkInput() {
+function checkInput() {
 	let isCheck = true
 	checkUsername(username)
 	checkEmail(email)
@@ -139,15 +139,13 @@ document.querySelector('.form-sign-up').addEventListener('submit', e => {
 		password: password.value,
 		cfpassword: cfpassword.value
 	}
-	let listUser = JSON.parse(localStorage.getItem('account')) || []
-	listUser.push(user)
+	let listUser = localStorage.getItem('account') ? JSON.parse(localStorage.getItem('account')) : []
 	if (!checkInput()) {
 		return
 	} else {
 		alert('đăng ký thành công')
+		listUser.push(user)
 		localStorage.setItem('account', JSON.stringify(listUser))
-		console.log(listUser)
-		history.pushState({}, '', 'index.html')
-		window.location.reload()
+		window.location.replace('index.html')
 	}
 })

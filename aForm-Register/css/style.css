@@ -14,9 +14,6 @@
 }
 body {
 	background: linear-gradient(to right, #004d7a, #008793, #00bf72, #a8eb12);
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	height: 100vh;
 }
 .container {
@@ -26,10 +23,10 @@ body {
 	outline: none;
 	border-radius: 15px;
 	width: 1200px;
-	max-width: 100%;
 	position: relative; /* Thêm dòng này */
 	max-height: auto;
 	height: 600px;
+	
 }
 .form-box {
 	padding: 1.5em 2.5em;
