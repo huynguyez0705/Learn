@@ -15,5 +15,7 @@
 	"a-file-icon-vscode.folderColor": "#727272",
 	"a-file-icon-vscode.saturation": 1,
 	"cSpell.language": "vi,en",
-	"cSpell.words": ["cfpass"]
+	"cSpell.words": ["cfpass"],
+	"html-to-css-autocompletion.triggerCharacters": false,
+	"html-to-css-autocompletion.autocompletionFilesScope": "multi-root"
 }
