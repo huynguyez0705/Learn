@@ -1,6 +1,8 @@
+import { checkUsername, handleInput } from './signup.js'
+import toast from './toast.js'
+
 const usernameLogin = document.getElementById('usernameLogin')
 const passwordLogin = document.getElementById('passwordLogin')
-import { checkUsername, handleInput, showError } from '.js/signup.js'
 
 handleInput(usernameLogin, () => {
 	checkUsername(usernameLogin)
@@ -26,18 +28,34 @@ document.querySelector('.form-sign-in').addEventListener('submit', e => {
 	const passwordLgValue = passwordLogin.value
 	let listAccount = localStorage.getItem('account') ? JSON.parse(localStorage.getItem('account')) : []
 	if (!checkInput()) {
-		window.location.replace = 'index.html'
+		toast({
+			type: 'error',
+			title: 'Thất bại',
+			msg: 'Bạn chưa nhập tài khoản và mật khẩu',
+			duration: 9000
+		})
 		return
 	}
+
 	const checkLogin = listAccount.some(value => {
 		return (
-			(value.username === usernameLgValue && value.password === passwordLgValue) ||
-			(value.email === usernameLgValue && value.password === passwordLgValue)
+			(value.username !== usernameLgValue && value.password !== passwordLgValue) ||
+			(value.email !== usernameLgValue && value.password !== passwordLgValue)
 		)
 	})
 	if (!checkLogin) {
+		toast({
+			type: 'error',
+			title: 'Thất bại',
+			msg: 'Tài khoản hoặc mật khẩu không đúng',
+			duration: 9000
+		})
 	} else {
-		alert('Đăng nhập thành công')
-		window.location.replace = 'index.html'
+		toast({
+			type: 'success',
+			title: 'Thành công',
+			msg: 'Bạn đã đăng nhập thành công',
+			duration: 9000
+		})
 	}
 })

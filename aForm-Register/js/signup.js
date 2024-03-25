@@ -1,3 +1,5 @@
+import toast from './toast.js'
+
 const container = document.querySelector('.container')
 const username = document.getElementById('username')
 const email = document.getElementById('email')
@@ -14,7 +16,7 @@ btnsignUp.addEventListener('click', () => {
 	container.classList.remove('active-panel')
 })
 
-export function showError(input, message) {
+function showError(input, message) {
 	const inputElement = input.parentElement
 	const errorElement = inputElement.querySelector('small')
 	errorElement.innerText = message
@@ -28,7 +30,7 @@ function showSuccess(input) {
 	inputElement.classList.add('success')
 	inputElement.classList.remove('error')
 }
-export function checkUsername(input) {
+function checkUsername(input) {
 	const inputElement = input.value.trim()
 	const regex = /^[a-zA-Z0-9!@#$%^&*()_+-=<>?]{1,15}$/
 	if (inputElement === '' || inputElement === null) {
@@ -89,7 +91,7 @@ function showPassword(inputs) {
 	})
 }
 
-export function handleInput(inputElement, validationFunction) {
+function handleInput(inputElement, validationFunction) {
 	if (inputElement) {
 		inputElement.addEventListener('blur', () => {
 			validationFunction(inputElement)
@@ -100,6 +102,7 @@ export function handleInput(inputElement, validationFunction) {
 		return inputElement
 	}
 }
+export { checkUsername, handleInput }
 handleInput(username, () => {
 	checkUsername(username)
 })
@@ -107,7 +110,7 @@ handleInput(email, () => {
 	checkEmail(email)
 })
 handleInput(password, () => {
-	isLength(password, 8, 20)
+	isLength(password, 1, 20)
 })
 handleInput(cfpassword, () => {
 	confirmPassword(cfpassword, password)
@@ -118,7 +121,7 @@ function checkInput() {
 	let isCheck = true
 	checkUsername(username)
 	checkEmail(email)
-	isLength(password, 8, 20)
+	isLength(password, 1, 20)
 	confirmPassword(cfpassword, password)
 	document.querySelectorAll('.form-control').forEach(control => {
 		if (control.classList.contains('error')) {
@@ -140,12 +143,33 @@ document.querySelector('.form-sign-up').addEventListener('submit', e => {
 		cfpassword: cfpassword.value
 	}
 	let listUser = localStorage.getItem('account') ? JSON.parse(localStorage.getItem('account')) : []
+	const listUsername = listUser.some(value => {
+		return value.username !== username.value.trim()
+	})
+	const listEmail = listUser.some(value => {
+		return value.email !== email.value.trim()
+	})
 	if (!checkInput()) {
-		return
+		toast({
+			type: 'error',
+			title: 'Thất bại',
+			msg: 'Bạn phải nhập thông tin đầy đủ',
+			duration: 9000
+		})
+	}
+	if (listUsername) {
+		showError(username, 'Tài khoản đã được sử dụng')
+	} else if (listEmail) {
+		showError(email, 'Email đã được sử dụng')
 	} else {
-		alert('đăng ký thành công')
 		listUser.push(user)
 		localStorage.setItem('account', JSON.stringify(listUser))
+		toast({
+			type: 'success',
+			title: 'Thành công',
+			msg: 'Chúc mừng bạn đã đăng ký thành công',
+			duration: 9000
+		})
 		window.location.replace('index.html')
 	}
 })
