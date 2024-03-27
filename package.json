@@ -1,0 +1,22 @@
+{
+  "name": "vscode",
+  "version": "1.0.0",
+  "description": "cua Huy ",
+  "main": "test.js",
+  "scripts": {
+    "test": "Hi every one"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huynguyez0705/Learning-code.git"
+  },
+  "keywords": [
+    "huynguyez0705"
+  ],
+  "author": "Nguyễn Huy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huynguyez0705/Learning-code/issues"
+  },
+  "homepage": "https://github.com/huynguyez0705/Learning-code#readme"
+}
